@@ -22,9 +22,6 @@ function Manifesto() {
             lines={headlineLines}
             as="h2"
             className="font-archivo text-headline text-white"
-            y={40}
-            stagger={0.12}
-            duration={0.8}
           />
           <motion.p
             initial={reduce ? false : { opacity: 0 }}
@@ -32,7 +29,7 @@ function Manifesto() {
             viewport={{ once: true, margin: '0px 0px -20% 0px' }}
             transition={{
               duration: 0.4,
-              delay: reduce ? 0 : 1.2,
+              delay: reduce ? 0 : 2,
               ease: 'easeOut',
             }}
             className="mt-8 text-right font-grotesk text-base font-medium text-sand"

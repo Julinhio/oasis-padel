@@ -7,9 +7,9 @@ function RevealText({
   as: Tag = 'h2',
   className = '',
   lineClassName = '',
-  y = 24,
-  stagger = 0.08,
-  duration = 0.8,
+  y = 120,
+  stagger = 0.2,
+  duration = 1.5,
   delayChildren = 0,
 }) {
   const reduce = useReducedMotion()
