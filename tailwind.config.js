@@ -31,6 +31,11 @@ export default {
       spacing: {
         'section-y': 'clamp(80px, 12vw, 160px)',
       },
+      letterSpacing: {
+        headline: '-0.02em',
+        name: '-0.01em',
+        micro: '0.1em',
+      },
       maxWidth: {
         content: '1440px',
       },
