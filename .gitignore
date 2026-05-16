@@ -20,8 +20,9 @@ dist-ssr
 # Vercel
 .vercel
 
-# Internal planning docs (not for the public repo)
+# Internal planning docs / reference assets (not for the public repo)
 brief_site_oasis_v1.md
+.reference/
 
 # Editor directories and files
 .vscode/*
