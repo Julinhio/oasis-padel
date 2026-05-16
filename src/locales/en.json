@@ -16,7 +16,18 @@
     "headline": ["PADEL IS COMING", "TO DA NANG.", "WE'RE BUILDING ITS HOME."],
     "caption": "A new chapter for sport in central Vietnam."
   },
-  "movement": {},
+  "movement": {
+    "micro-label": "03 — A GLOBAL MOVEMENT",
+    "headline": ["THE FASTEST-GROWING", "SPORT ON EARTH."],
+    "paragraph": "Born in Mexico, perfected in Spain, padel is now sweeping Asia. From Singapore to Bali, from Kuala Lumpur to Bangkok, a new generation is picking up the racket. Da Nang is next.",
+    "stats": [
+      "Practitioners worldwide",
+      "Growth in 5 years",
+      "Clubs in Spain alone",
+      "Clubs in Bali today",
+      "Club in Da Nang today"
+    ]
+  },
   "club": {},
   "academy": {},
   "impact": {},

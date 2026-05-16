@@ -16,7 +16,18 @@
     "headline": ["PADEL ĐANG ĐẾN", "ĐÀ NẴNG.", "CHÚNG TÔI XÂY NGÔI NHÀ CỦA NÓ."],
     "caption": "Một chương mới cho thể thao tại miền Trung Việt Nam."
   },
-  "movement": {},
+  "movement": {
+    "micro-label": "03 — MỘT LÀN SÓNG TOÀN CẦU",
+    "headline": ["MÔN THỂ THAO", "PHÁT TRIỂN NHANH NHẤT THẾ GIỚI."],
+    "paragraph": "Sinh ra tại Mexico, hoàn thiện tại Tây Ban Nha, padel đang lan tỏa khắp châu Á. Từ Singapore đến Bali, từ Kuala Lumpur đến Bangkok, một thế hệ mới đang cầm vợt. Đà Nẵng là điểm đến tiếp theo.",
+    "stats": [
+      "Người chơi trên toàn thế giới",
+      "Tăng trưởng trong 5 năm",
+      "Câu lạc bộ riêng tại Tây Ban Nha",
+      "Câu lạc bộ tại Bali hiện nay",
+      "Câu lạc bộ tại Đà Nẵng hiện nay"
+    ]
+  },
   "club": {},
   "academy": {},
   "impact": {},

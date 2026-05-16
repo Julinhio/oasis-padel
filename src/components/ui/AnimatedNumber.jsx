@@ -8,6 +8,7 @@ function AnimatedNumber({
   prefix = '',
   suffix = '',
   duration = 1.5,
+  delay = 0,
   className = '',
 }) {
   const { ref, inView } = useReveal()
@@ -23,11 +24,12 @@ function AnimatedNumber({
     }
     const controls = animate(0, value, {
       duration,
+      delay,
       ease: [0.22, 1, 0.36, 1],
       onUpdate: (v) => setCurrent(v),
     })
     return () => controls.stop()
-  }, [inView, value, duration, reduce])
+  }, [inView, value, duration, delay, reduce])
 
   const formatted = new Intl.NumberFormat(i18n.resolvedLanguage).format(
     Math.round(current),
