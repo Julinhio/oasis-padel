@@ -15,6 +15,7 @@ export default {
         archivo: ['"Archivo Black"', 'sans-serif'],
         grotesk: ['"Space Grotesk"', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
+        syncopate: ['Syncopate', 'sans-serif'],
       },
       fontSize: {
         xs: ['12px', '16px'],
@@ -35,6 +36,7 @@ export default {
         headline: '-0.02em',
         name: '-0.01em',
         micro: '0.1em',
+        baseline: '0.2em',
       },
       maxWidth: {
         content: '1440px',

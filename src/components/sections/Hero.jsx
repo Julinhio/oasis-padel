@@ -50,21 +50,35 @@ function Hero() {
         </video>
 
         <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_50%_44%,rgba(0,0,0,0.6),transparent_72%)]" />
 
         <div className="absolute inset-x-0 top-[45%] flex -translate-y-1/2 flex-col items-center px-6 text-center">
           <motion.h1
             initial={reduce ? false : { opacity: 0, scale: 0.95 }}
             animate={reduce ? {} : { opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, ease: 'easeOut' }}
-            className="font-archivo text-mega leading-none tracking-headline text-white"
+            className="font-syncopate text-[clamp(2.75rem,9vw,7.5rem)] font-bold leading-none text-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.55)]"
           >
             OASIS
           </motion.h1>
-          <motion.p
+
+          <motion.div
             initial={reduce ? false : { opacity: 0 }}
             animate={reduce ? {} : { opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
-            className="mt-4 font-grotesk text-base text-cream sm:text-lg"
+            className="flex w-full flex-col items-center"
+          >
+            <div className="mt-6 h-px w-full max-w-md bg-sun" />
+            <p className="mt-4 font-grotesk text-sm font-medium uppercase tracking-baseline text-cream">
+              PADEL · ACADEMY · LIFESTYLE
+            </p>
+          </motion.div>
+
+          <motion.p
+            initial={reduce ? false : { opacity: 0 }}
+            animate={reduce ? {} : { opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.7, ease: 'easeOut' }}
+            className="mt-5 font-grotesk text-base text-cream/80 sm:text-lg"
           >
             {t('hero.subtitle')}
           </motion.p>
