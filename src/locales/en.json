@@ -11,7 +11,11 @@
     "founders": "Founders",
     "contact": "Contact"
   },
-  "manifesto": {},
+  "manifesto": {
+    "micro-label": "02 — MANIFESTO",
+    "headline": ["PADEL IS COMING", "TO DA NANG.", "WE'RE BUILDING ITS HOME."],
+    "caption": "A new chapter for sport in central Vietnam."
+  },
   "movement": {},
   "club": {},
   "academy": {},

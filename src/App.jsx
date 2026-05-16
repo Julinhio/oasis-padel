@@ -1,8 +1,9 @@
 import { useLenis } from './hooks/useLenis'
 import Nav from './components/layout/Nav'
 import Hero from './components/sections/Hero'
+import Manifesto from './components/sections/Manifesto'
 
-const PLACEHOLDER_SECTIONS = ['club', 'academy', 'impact', 'founders', 'contact']
+const PLACEHOLDERS = ['movement', 'club', 'academy', 'impact', 'founders', 'contact']
 
 function App() {
   const lenis = useLenis()
@@ -11,12 +12,13 @@ function App() {
     <>
       <Nav lenis={lenis} />
       <Hero />
-      {PLACEHOLDER_SECTIONS.map((id, i) => (
+      <Manifesto />
+      {PLACEHOLDERS.map((id, i) => (
         <section
           key={id}
           id={id}
           className={`flex min-h-screen items-center justify-center px-6 ${
-            i % 2 === 0 ? 'bg-black' : 'bg-anthracite'
+            i % 2 === 0 ? 'bg-anthracite' : 'bg-black'
           }`}
         >
           <p className="font-grotesk text-sm uppercase tracking-micro text-sand">

@@ -28,6 +28,10 @@ export default {
         '6xl': ['72px', '80px'],
         '9xl': ['128px', '1'],
         mega: ['clamp(80px, 12vw, 200px)', '1'],
+        headline: [
+          'clamp(48px, 9vw, 144px)',
+          { lineHeight: '0.95', letterSpacing: '-0.02em' },
+        ],
       },
       spacing: {
         'section-y': 'clamp(80px, 12vw, 160px)',

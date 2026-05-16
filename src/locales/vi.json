@@ -11,7 +11,11 @@
     "founders": "Sáng lập",
     "contact": "Liên hệ"
   },
-  "manifesto": {},
+  "manifesto": {
+    "micro-label": "02 — TUYÊN NGÔN",
+    "headline": ["PADEL ĐANG ĐẾN", "ĐÀ NẴNG.", "CHÚNG TÔI XÂY NGÔI NHÀ CỦA NÓ."],
+    "caption": "Một chương mới cho thể thao tại miền Trung Việt Nam."
+  },
   "movement": {},
   "club": {},
   "academy": {},
