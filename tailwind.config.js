@@ -29,7 +29,7 @@ export default {
         '9xl': ['128px', '1'],
         mega: ['clamp(80px, 12vw, 200px)', '1'],
         headline: [
-          'clamp(56px, 11vw, 200px)',
+          'clamp(56px, 9.5vw, 160px)',
           { lineHeight: '0.95', letterSpacing: '-0.02em' },
         ],
       },

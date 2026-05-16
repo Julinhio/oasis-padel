@@ -11,14 +11,13 @@ function Manifesto() {
   return (
     <section
       id="manifesto"
-      className="relative flex min-h-screen items-center bg-black py-section-y"
+      className="flex min-h-screen items-center bg-black py-section-y"
     >
-      <MicroLabel className="absolute left-6 top-section-y md:left-12 lg:left-20">
-        {t('manifesto.micro-label')}
-      </MicroLabel>
-
       <div className="mx-auto w-full max-w-content px-6 md:px-12 lg:px-20">
         <div className="w-full lg:w-4/5">
+          <MicroLabel className="mb-12 block lg:mb-20">
+            {t('manifesto.micro-label')}
+          </MicroLabel>
           <RevealText
             lines={headlineLines}
             as="h2"
