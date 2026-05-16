@@ -11,7 +11,7 @@ function Manifesto() {
   return (
     <section
       id="manifesto"
-      className="flex min-h-screen items-center bg-black py-section-y"
+      className="relative flex min-h-screen items-center bg-black py-section-y"
     >
       <div className="mx-auto w-full max-w-content px-6 md:px-12 lg:px-20">
         <div className="w-full lg:w-4/5">

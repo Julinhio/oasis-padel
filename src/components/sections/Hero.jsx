@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import {
   motion,
   useScroll,
@@ -12,19 +12,24 @@ function Hero() {
   const reduce = useReducedMotion()
   const sectionRef = useRef(null)
   const videoRef = useRef(null)
+  const [heroHeight, setHeroHeight] = useState(0)
 
   useEffect(() => {
     const video = videoRef.current
     if (video) video.play().catch(() => {})
   }, [])
 
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ['start start', 'end start'],
-  })
+  useEffect(() => {
+    const measure = () => setHeroHeight(sectionRef.current?.offsetHeight ?? 0)
+    measure()
+    window.addEventListener('resize', measure)
+    return () => window.removeEventListener('resize', measure)
+  }, [])
 
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '-30%'])
-  const opacity = useTransform(scrollYProgress, [0.5, 0.8], [1, 0])
+  const { scrollY } = useScroll()
+  const h = heroHeight || 1
+  const y = useTransform(scrollY, [0, h], ['0%', '-30%'])
+  const opacity = useTransform(scrollY, [h * 0.5, h * 0.8], [1, 0])
 
   return (
     <section
