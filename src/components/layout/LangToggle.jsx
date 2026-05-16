@@ -10,7 +10,7 @@ function LangToggle() {
       : 'font-medium text-sand transition-colors duration-200 hover:text-cream'
 
   return (
-    <div className="flex items-center gap-2 font-grotesk text-xs uppercase tracking-micro">
+    <div className="flex items-center gap-2 rounded-full bg-black/30 px-3 py-1.5 font-grotesk text-xs uppercase tracking-micro backdrop-blur-sm">
       <button
         type="button"
         onClick={() => i18n.changeLanguage('en')}

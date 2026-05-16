@@ -4,6 +4,13 @@
     "micro-label": "EST. 2026   ·   04 COURTS   ·   01 VISION",
     "scroll": "SCROLL"
   },
+  "nav": {
+    "club": "Club",
+    "academy": "Academy",
+    "impact": "Impact",
+    "founders": "Founders",
+    "contact": "Contact"
+  },
   "manifesto": {},
   "movement": {},
   "club": {},
