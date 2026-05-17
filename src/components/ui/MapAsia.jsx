@@ -7,9 +7,12 @@ const GRID_H = [90, 180, 270, 360]
 
 // DOM order = light-up order
 const CITIES = [
-  { name: 'SINGAPORE', x: 138, y: 276, lx: 150, ly: 277, anchor: 'start' },
+  { name: 'SINGAPORE', x: 138, y: 276, lx: 150, ly: 276, anchor: 'start' },
   { name: 'KUALA LUMPUR', x: 102, y: 252, lx: 114, ly: 252, anchor: 'start' },
   { name: 'BANGKOK', x: 82, y: 111, lx: 94, ly: 111, anchor: 'start' },
+  { name: 'CHIANG MAI', x: 57, y: 43, lx: 69, ly: 43, anchor: 'start' },
+  { name: 'HO CHI MINH CITY', x: 187, y: 149, lx: 199, ly: 149, anchor: 'start' },
+  { name: 'JAKARTA', x: 188, y: 376, lx: 200, ly: 376, anchor: 'start' },
   { name: 'BALI', x: 328, y: 404, lx: 340, ly: 404, anchor: 'start' },
 ]
 
@@ -81,7 +84,7 @@ function MapAsia() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.4, delay: 1, ease: 'easeOut' }}
+        transition={{ duration: 0.4, delay: 1.8, ease: 'easeOut' }}
       >
         <motion.circle
           cx={DA_NANG.x}
