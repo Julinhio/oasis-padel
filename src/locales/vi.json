@@ -13,13 +13,9 @@
   },
   "manifesto": {
     "micro-label": "02 — TUYÊN NGÔN",
-    "block1": "PADEL KHÔNG CHỈ LÀ MỘT MÔN THỂ THAO.",
-    "block2": [
-      { "pre": "ĐÓ LÀ ", "accent": "KẾT NỐI.", "post": "" },
-      { "pre": "ĐÓ LÀ ", "accent": "KỶ LUẬT.", "post": "" },
-      { "pre": "ĐÓ LÀ ", "accent": "BIỂU TƯỢNG", "post": " MỚI CỦA ĐÀ NẴNG." }
-    ],
-    "block3": ["CHÚNG TÔI KHÔNG XÂY MỘT CÂU LẠC BỘ.", "CHÚNG TÔI XÂY MỘT NGÔI NHÀ."]
+    "headline-line-1-accent": "ĐÀ NẴNG",
+    "headline-line-1-rest": " XỨNG ĐÁNG VỚI ĐIỀU NÀY.",
+    "headline-line-2": "NGÔI NHÀ MỚI CHO CUỘC CHƠI."
   },
   "movement": {
     "micro-label": "03 — MỘT LÀN SÓNG TOÀN CẦU",

@@ -13,13 +13,9 @@
   },
   "manifesto": {
     "micro-label": "02 — MANIFESTO",
-    "block1": "WE BELIEVE PADEL IS MORE THAN A SPORT.",
-    "block2": [
-      { "pre": "IT'S ", "accent": "CONNECTION.", "post": "" },
-      { "pre": "IT'S ", "accent": "DISCIPLINE.", "post": "" },
-      { "pre": "IT'S DA NANG'S NEXT ", "accent": "SIGNATURE.", "post": "" }
-    ],
-    "block3": ["WE'RE NOT BUILDING A CLUB.", "WE'RE BUILDING A HOME."]
+    "headline-line-1-accent": "DA NANG",
+    "headline-line-1-rest": " DESERVES THIS.",
+    "headline-line-2": "A NEW HOME FOR THE GAME."
   },
   "movement": {
     "micro-label": "03 — A GLOBAL MOVEMENT",
