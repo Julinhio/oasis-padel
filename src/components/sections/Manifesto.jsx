@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import MicroLabel from '../ui/MicroLabel'
+import ChapterMark from '../ui/ChapterMark'
 
 const TRIGGER = '0px 0px -30% 0px'
 const EASE_OUT = [0.22, 1, 0.36, 1]
@@ -23,9 +24,11 @@ function Manifesto() {
   return (
     <section
       id="manifesto"
-      className="flex min-h-[50vh] flex-col bg-black py-[clamp(48px,8vw,96px)] lg:min-h-[60vh]"
+      className="relative flex min-h-[50vh] flex-col overflow-hidden bg-black py-[clamp(48px,8vw,96px)] lg:min-h-[60vh]"
     >
-      <div className="mx-auto flex w-full max-w-content flex-1 flex-col px-6 md:px-12 lg:px-20">
+      <ChapterMark number="01" side="right" />
+
+      <div className="relative z-10 mx-auto flex w-full max-w-content flex-1 flex-col px-6 md:px-12 lg:px-20">
         <MicroLabel className="mb-12 block lg:mb-16">
           {t('manifesto.micro-label')}
         </MicroLabel>

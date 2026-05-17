@@ -2,23 +2,38 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import MicroLabel from '../ui/MicroLabel'
 import RevealText from '../ui/RevealText'
+import ChapterMark from '../ui/ChapterMark'
+import { useMediaQuery } from '../../hooks/useMediaQuery'
 
 const SUBSECTIONS = [
-  { key: 'courts', image: '/assets/club/courts.png', imageLeft: true },
-  { key: 'wellness', image: '/assets/club/wellness.png', imageLeft: false },
-  { key: 'lounge', image: '/assets/club/lounge.png', imageLeft: true },
+  { key: 'courts', image: '/assets/club/courts.png', imageLeft: true, reveal: 'up' },
+  { key: 'wellness', image: '/assets/club/wellness.png', imageLeft: false, reveal: 'right' },
+  { key: 'lounge', image: '/assets/club/lounge.png', imageLeft: true, reveal: 'left' },
 ]
+
+// clip-path start state per reveal direction; animates to inset(0)
+const CLIP_FROM = {
+  up: 'inset(100% 0% 0% 0%)',
+  right: 'inset(0% 0% 0% 100%)',
+  left: 'inset(0% 100% 0% 0%)',
+}
 
 const inView = { once: true, margin: '0px 0px -15% 0px' }
 
-function ClubSubsection({ data, image, alt, imageLeft }) {
+function ClubSubsection({ data, image, alt, imageLeft, reveal, chapter }) {
   const reduce = useReducedMotion()
+  const isDesktop = useMediaQuery('(min-width: 768px)')
+
+  // Lateral reveals only on desktop; mobile single-column falls back to bottom-up
+  const clipFrom = CLIP_FROM[isDesktop ? reveal : 'up']
 
   return (
-    <div className="flex min-h-screen items-center py-section-y">
-      <div className="mx-auto grid w-full max-w-content grid-cols-1 items-center gap-10 px-6 md:px-12 lg:grid-cols-12 lg:gap-16 lg:px-20">
+    <div className="relative z-10 overflow-hidden py-section-y">
+      {chapter && <ChapterMark number={chapter} side="right" />}
+
+      <div className="relative z-10 mx-auto grid w-full max-w-content grid-cols-1 items-center gap-10 px-6 md:px-12 lg:grid-cols-12 lg:gap-16 lg:px-20">
         <motion.div
-          initial={reduce ? false : { clipPath: 'inset(100% 0% 0% 0%)' }}
+          initial={reduce ? false : { clipPath: clipFrom }}
           whileInView={reduce ? {} : { clipPath: 'inset(0% 0% 0% 0%)' }}
           viewport={inView}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
@@ -97,11 +112,16 @@ function Club() {
 
   return (
     <section id="club" className="relative bg-black">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-b from-transparent to-anthracite/30"
+      />
+
       <div className="pointer-events-none sticky top-24 z-20 mx-auto max-w-content px-6 md:px-12 lg:px-20">
         <MicroLabel className="block">{t('club.micro-label')}</MicroLabel>
       </div>
 
-      {SUBSECTIONS.map((sub) => {
+      {SUBSECTIONS.map((sub, i) => {
         const data = t(`club.${sub.key}`, { returnObjects: true })
         return (
           <ClubSubsection
@@ -110,6 +130,8 @@ function Club() {
             image={sub.image}
             alt={data.headline.join(' ')}
             imageLeft={sub.imageLeft}
+            reveal={sub.reveal}
+            chapter={i === 0 ? '03' : null}
           />
         )
       })}

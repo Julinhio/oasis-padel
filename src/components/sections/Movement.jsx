@@ -5,6 +5,7 @@ import RevealText from '../ui/RevealText'
 import RevealBlock from '../ui/RevealBlock'
 import AnimatedNumber from '../ui/AnimatedNumber'
 import MapAsia from '../ui/MapAsia'
+import ChapterMark from '../ui/ChapterMark'
 
 const STATS = [
   { value: 30, suffix: 'M+' },
@@ -23,9 +24,19 @@ function Movement() {
   return (
     <section
       id="movement"
-      className="relative flex min-h-screen flex-col justify-center bg-black py-section-y lg:min-h-[120vh]"
+      className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-black py-section-y lg:min-h-[120vh]"
     >
-      <div className="mx-auto w-full max-w-content px-6 md:px-12 lg:px-20">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute right-0 top-0 z-0 h-[60vh] w-[60vh] max-h-[700px] max-w-[700px]"
+        style={{
+          background:
+            'radial-gradient(circle at top right, rgba(242,201,76,0.06) 0%, rgba(242,201,76,0) 70%)',
+        }}
+      />
+      <ChapterMark number="02" side="left" />
+
+      <div className="relative z-10 mx-auto w-full max-w-content px-6 md:px-12 lg:px-20">
         <MicroLabel className="mb-12 block lg:mb-20">
           {t('movement.micro-label')}
         </MicroLabel>

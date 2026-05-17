@@ -54,20 +54,33 @@ function Nav({ lenis }) {
   }, [menuOpen])
 
   useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > window.innerHeight * 0.85)
+    const update = (value) => setScrolled(value > 64)
+
+    // Lenis owns the scroll — a native window listener never fires.
+    if (lenis) {
+      update(lenis.scroll)
+      const onScroll = ({ scroll }) => update(scroll)
+      lenis.on('scroll', onScroll)
+      return () => lenis.off('scroll', onScroll)
     }
+
+    const onScroll = () => update(window.scrollY)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  }, [lenis])
 
   return (
     <>
-      <nav
-        className={`fixed inset-x-0 top-0 z-50 backdrop-blur-md transition-colors duration-300 ${
-          scrolled ? 'bg-black/85' : 'bg-black/70'
-        }`}
+      <motion.nav
+        initial={false}
+        animate={{
+          backgroundColor: scrolled ? 'rgba(28,28,28,0.85)' : 'rgba(28,28,28,0)',
+          backdropFilter: scrolled ? 'blur(12px)' : 'blur(0px)',
+          WebkitBackdropFilter: scrolled ? 'blur(12px)' : 'blur(0px)',
+        }}
+        transition={{ duration: reduce ? 0 : 0.4, ease: 'easeOut' }}
+        className="fixed inset-x-0 top-0 z-50"
       >
         <div className="mx-auto flex max-w-content items-center justify-between px-6 py-5 md:px-12 lg:px-20">
           <a
@@ -105,7 +118,7 @@ function Nav({ lenis }) {
             </button>
           </div>
         </div>
-      </nav>
+      </motion.nav>
 
       <AnimatePresence>
         {menuOpen && (

@@ -4,6 +4,7 @@ import MicroLabel from '../ui/MicroLabel'
 import RevealText from '../ui/RevealText'
 import RevealBlock from '../ui/RevealBlock'
 import AnimatedNumber from '../ui/AnimatedNumber'
+import ChapterMark from '../ui/ChapterMark'
 
 const PILLARS = [
   { value: 6, suffix: '+' },
@@ -32,8 +33,9 @@ function Academy() {
         transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
       />
       <div className="absolute inset-0 bg-black/70" />
+      <ChapterMark number="04" side="left" />
 
-      <div className="relative mx-auto w-full max-w-[1200px] px-6 md:px-12 lg:px-20">
+      <div className="relative z-10 mx-auto w-full max-w-[1200px] px-6 md:px-12 lg:px-20">
         <MicroLabel className="mb-12 block lg:mb-20">
           {t('academy.micro-label')}
         </MicroLabel>
