@@ -7,6 +7,74 @@ import {
 } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 
+function HeroTagline({ reduce }) {
+  const { t } = useTranslation()
+  const prefix = t('hero.tagline-prefix')
+  const accent = t('hero.tagline-accent')
+  const suffix = t('hero.tagline-suffix')
+
+  const chars = [
+    ...[...prefix].map((c) => ({ c, accent: false })),
+    ...[...accent].map((c) => ({ c, accent: true })),
+    ...[...suffix].map((c) => ({ c, accent: false })),
+  ]
+  const total = chars.length
+
+  const [typed, setTyped] = useState(reduce ? total : 0)
+  const [done, setDone] = useState(reduce)
+
+  useEffect(() => {
+    if (reduce) {
+      setTyped(total)
+      setDone(true)
+      return
+    }
+    setTyped(0)
+    setDone(false)
+    let i = 0
+    let intervalId
+    const startId = setTimeout(() => {
+      intervalId = setInterval(() => {
+        i += 1
+        setTyped(i)
+        if (i >= total) {
+          clearInterval(intervalId)
+          setDone(true)
+        }
+      }, 44)
+    }, 1400)
+    return () => {
+      clearTimeout(startId)
+      clearInterval(intervalId)
+    }
+  }, [reduce, total])
+
+  return (
+    <p
+      aria-label={prefix + accent + suffix}
+      className="font-grotesk text-[clamp(16px,1.8vw,24px)] font-medium uppercase tracking-[0.15em] text-cream"
+    >
+      <span aria-hidden="true">
+        {chars.map((ch, i) => (
+          <motion.span
+            key={i}
+            animate={{
+              opacity: i < typed ? 1 : 0,
+              color: ch.accent && done ? '#F2C94C' : '#F0EAE0',
+            }}
+            transition={{
+              opacity: { duration: 0.06 },
+              color: { duration: reduce ? 0 : 0.6, ease: 'easeOut' },
+            }}
+          >
+            {ch.c === ' ' ? ' ' : ch.c}
+          </motion.span>
+        ))}
+      </span>
+    </p>
+  )
+}
+
 function Hero() {
   const { t } = useTranslation()
   const reduce = useReducedMotion()
@@ -43,7 +111,7 @@ function Hero() {
       >
         <video
           ref={videoRef}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full origin-top scale-[1.1] object-cover"
           autoPlay
           muted
           loop
@@ -78,15 +146,10 @@ function Hero() {
               PADEL · ACADEMY · LIFESTYLE
             </p>
           </motion.div>
+        </div>
 
-          <motion.p
-            initial={reduce ? false : { opacity: 0 }}
-            animate={reduce ? {} : { opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.7, ease: 'easeOut' }}
-            className="mt-5 font-grotesk text-base text-cream/80 sm:text-lg"
-          >
-            {t('hero.subtitle')}
-          </motion.p>
+        <div className="absolute inset-x-0 bottom-[180px] flex justify-center px-6 text-center">
+          <HeroTagline reduce={reduce} />
         </div>
 
         <motion.div

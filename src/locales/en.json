@@ -1,8 +1,10 @@
 {
   "hero": {
-    "subtitle": "Padel Academy & Wellness — Da Nang, Vietnam",
     "micro-label": "EST. 2026   ·   04 COURTS   ·   01 VISION",
-    "scroll": "SCROLL"
+    "scroll": "SCROLL",
+    "tagline-prefix": "PADEL IS COMING TO ",
+    "tagline-accent": "DA NANG",
+    "tagline-suffix": "."
   },
   "nav": {
     "club": "Club",

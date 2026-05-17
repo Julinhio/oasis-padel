@@ -1,8 +1,10 @@
 {
   "hero": {
-    "subtitle": "Học viện Padel & Wellness — Đà Nẵng, Việt Nam",
     "micro-label": "EST. 2026   ·   04 SÂN   ·   01 TẦM NHÌN",
-    "scroll": "CUỘN"
+    "scroll": "CUỘN",
+    "tagline-prefix": "PADEL ĐANG ĐẾN VỚI ",
+    "tagline-accent": "ĐÀ NẴNG",
+    "tagline-suffix": "."
   },
   "nav": {
     "club": "Câu lạc bộ",
