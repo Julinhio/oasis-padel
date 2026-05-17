@@ -10,6 +10,7 @@ function Nav({ lenis }) {
   const { t } = useTranslation()
   const reduce = useReducedMotion()
   const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
   const links = SECTIONS.map((id) => ({ id, label: t(`nav.${id}`) }))
 
@@ -52,9 +53,22 @@ function Nav({ lenis }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [menuOpen])
 
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > window.innerHeight * 0.85)
+    }
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
   return (
     <>
-      <nav className="fixed inset-x-0 top-0 z-50">
+      <nav
+        className={`fixed inset-x-0 top-0 z-50 backdrop-blur-md transition-colors duration-300 ${
+          scrolled ? 'bg-black/85' : 'bg-black/70'
+        }`}
+      >
         <div className="mx-auto flex max-w-content items-center justify-between px-6 py-5 md:px-12 lg:px-20">
           <a
             href="#top"

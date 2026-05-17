@@ -111,7 +111,7 @@ function Hero() {
       >
         <video
           ref={videoRef}
-          className="absolute inset-0 h-full w-full origin-top scale-[1.1] object-cover"
+          className="absolute inset-0 h-full w-full object-cover"
           autoPlay
           muted
           loop
@@ -124,6 +124,10 @@ function Hero() {
 
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_50%_44%,rgba(0,0,0,0.6),transparent_72%)]" />
+
+        {/* Permanent bottom mask — hides the video's Veo watermark,
+            even as the hero parallaxes upward on scroll. */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[130px] bg-[linear-gradient(to_top,#1C1C1C_0%,#1C1C1C_45%,transparent_100%)]" />
 
         <div className="absolute inset-x-0 top-[45%] flex -translate-y-1/2 flex-col items-center px-6 text-center">
           <motion.h1
