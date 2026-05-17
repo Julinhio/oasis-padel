@@ -37,7 +37,7 @@ function FounderCard({ person, index }) {
         </span>
       </motion.div>
 
-      <div className="pt-6">
+      <div className="pt-12">
         <h3 className="font-archivo text-xl tracking-name text-white">
           {person.name}
         </h3>

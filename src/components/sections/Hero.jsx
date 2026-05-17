@@ -96,7 +96,10 @@ function Hero() {
 
   const { scrollY } = useScroll()
   const h = heroHeight || 1
-  const y = useTransform(scrollY, [0, h], ['0%', '-30%'])
+  // Rounded to whole pixels so the parallax never lands on a
+  // sub-pixel offset (which left a faint seam at the hero base).
+  const yRaw = useTransform(scrollY, [0, h], [0, -0.3 * h])
+  const y = useTransform(yRaw, (v) => Math.round(v))
   const opacity = useTransform(scrollY, [h * 0.5, h * 0.8], [1, 0])
 
   return (
@@ -126,8 +129,9 @@ function Hero() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_50%_44%,rgba(0,0,0,0.6),transparent_72%)]" />
 
         {/* Permanent bottom mask — hides the video's Veo watermark,
-            even as the hero parallaxes upward on scroll. */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[130px] bg-[linear-gradient(to_top,#1C1C1C_0%,#1C1C1C_45%,transparent_100%)]" />
+            even as the hero parallaxes upward on scroll. Overhangs
+            the base (clipped by the section) so no edge seam shows. */}
+        <div className="pointer-events-none absolute inset-x-0 -bottom-6 h-[154px] bg-[linear-gradient(to_top,#1C1C1C_0%,#1C1C1C_45%,transparent_100%)]" />
 
         <div className="absolute inset-x-0 top-[45%] flex -translate-y-1/2 flex-col items-center px-6 text-center">
           <motion.h1
