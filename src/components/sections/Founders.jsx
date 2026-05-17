@@ -8,42 +8,37 @@ const inView = { once: true, margin: '0px 0px -15% 0px' }
 
 function FounderCard({ person, index }) {
   const reduce = useReducedMotion()
+  const photo = `/assets/founders/${person.name.toLowerCase()}.png`
+  const delay = reduce ? 0 : index * 0.2
 
   return (
     <motion.div
-      initial={reduce ? false : { opacity: 0, y: 40 }}
-      whileInView={reduce ? {} : { opacity: 1, y: 0 }}
+      initial={reduce ? false : { opacity: 0 }}
+      whileInView={reduce ? {} : { opacity: 1 }}
       viewport={inView}
-      transition={{
-        duration: 0.7,
-        delay: reduce ? 0 : index * 0.15,
-        ease: [0.22, 1, 0.36, 1],
-      }}
-      className="group"
+      transition={{ duration: 0.6, delay, ease: 'easeOut' }}
+      className="group rounded-[2px] border border-transparent transition-[border-color,box-shadow] duration-[600ms] ease-out hover:border-sun/20 hover:shadow-[0_16px_20px_-6px_rgba(242,201,76,0.3)]"
     >
       <motion.div
         initial={reduce ? false : { clipPath: 'inset(100% 0% 0% 0%)' }}
         whileInView={reduce ? {} : { clipPath: 'inset(0% 0% 0% 0%)' }}
         viewport={inView}
-        transition={{
-          duration: 1,
-          delay: reduce ? 0 : index * 0.15,
-          ease: [0.22, 1, 0.36, 1],
-        }}
-        className="overflow-hidden rounded-[2px] transition-shadow duration-300 group-hover:shadow-[0_10px_44px_rgba(242,201,76,0.1)]"
+        transition={{ duration: 1.2, delay, ease: [0.22, 1, 0.36, 1] }}
+        className="relative overflow-hidden rounded-[2px]"
       >
-        <div className="flex aspect-[4/5] items-center justify-center bg-[#2A2A2A] transition-transform duration-300 ease-out [container-type:size] group-hover:scale-[1.03]">
-          <span className="font-archivo text-[85cqh] leading-none text-sun">
-            {person.initial}
-          </span>
-        </div>
+        <img
+          src={photo}
+          alt={`${person.name} — ${person.role}`}
+          loading="lazy"
+          className="aspect-[4/5] w-full object-cover object-top [filter:saturate(0.85)] transition-[transform,filter] duration-[600ms] ease-out group-hover:scale-105 group-hover:[filter:saturate(1)]"
+        />
+        <span className="absolute left-4 top-4 z-10 font-grotesk text-xs font-medium tracking-micro text-sun">
+          {person.index}
+        </span>
       </motion.div>
 
       <div className="pt-6">
-        <span className="font-grotesk text-xs font-medium tracking-micro text-sun">
-          {person.index}
-        </span>
-        <h3 className="mt-2 font-archivo text-xl tracking-name text-white">
+        <h3 className="font-archivo text-xl tracking-name text-white">
           {person.name}
         </h3>
         <p className="mt-1 font-grotesk text-base font-medium text-cream">
