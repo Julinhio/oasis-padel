@@ -13,8 +13,13 @@
   },
   "manifesto": {
     "micro-label": "02 — MANIFESTO",
-    "headline": ["PADEL IS COMING", "TO DA NANG.", "WE'RE BUILDING ITS HOME."],
-    "caption": "A new chapter for sport in central Vietnam."
+    "block1": "WE BELIEVE PADEL IS MORE THAN A SPORT.",
+    "block2": [
+      { "pre": "IT'S ", "accent": "CONNECTION.", "post": "" },
+      { "pre": "IT'S ", "accent": "DISCIPLINE.", "post": "" },
+      { "pre": "IT'S DA NANG'S NEXT ", "accent": "SIGNATURE.", "post": "" }
+    ],
+    "block3": ["WE'RE NOT BUILDING A CLUB.", "WE'RE BUILDING A HOME."]
   },
   "movement": {
     "micro-label": "03 — A GLOBAL MOVEMENT",

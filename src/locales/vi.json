@@ -13,8 +13,13 @@
   },
   "manifesto": {
     "micro-label": "02 — TUYÊN NGÔN",
-    "headline": ["PADEL ĐANG ĐẾN", "ĐÀ NẴNG.", "CHÚNG TÔI XÂY NGÔI NHÀ CỦA NÓ."],
-    "caption": "Một chương mới cho thể thao tại miền Trung Việt Nam."
+    "block1": "PADEL KHÔNG CHỈ LÀ MỘT MÔN THỂ THAO.",
+    "block2": [
+      { "pre": "ĐÓ LÀ ", "accent": "KẾT NỐI.", "post": "" },
+      { "pre": "ĐÓ LÀ ", "accent": "KỶ LUẬT.", "post": "" },
+      { "pre": "ĐÓ LÀ ", "accent": "BIỂU TƯỢNG", "post": " MỚI CỦA ĐÀ NẴNG." }
+    ],
+    "block3": ["CHÚNG TÔI KHÔNG XÂY MỘT CÂU LẠC BỘ.", "CHÚNG TÔI XÂY MỘT NGÔI NHÀ."]
   },
   "movement": {
     "micro-label": "03 — MỘT LÀN SÓNG TOÀN CẦU",

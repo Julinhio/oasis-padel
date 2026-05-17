@@ -11,6 +11,7 @@ function RevealText({
   stagger = 0.2,
   duration = 1.5,
   delayChildren = 0,
+  viewportMargin = '0px 0px -20% 0px',
 }) {
   const reduce = useReducedMotion()
 
@@ -36,7 +37,7 @@ function RevealText({
         variants={container}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: '0px 0px -20% 0px' }}
+        viewport={{ once: true, margin: viewportMargin }}
         className="block"
       >
         {lines.map((text, i) => (
