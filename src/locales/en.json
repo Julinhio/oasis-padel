@@ -49,8 +49,53 @@
       "specs": ["SPECIALTY COFFEE", "HEALTHY KITCHEN", "COWORKING-FRIENDLY"]
     }
   },
-  "academy": {},
-  "impact": {},
-  "founders": {},
-  "cta": {}
+  "academy": {
+    "micro-label": "05 — THE ACADEMY",
+    "headline": ["BUILT FOR THE", "NEXT GENERATION."],
+    "subtitle": "Oasis Padel Academy — Da Nang's first dedicated padel school for kids and adults.",
+    "paragraph": "A program built with international coaches and local talents. Open to children from age 6. Scholarships for promising young Vietnamese players. Because the future of padel in Asia will be written here, by them.",
+    "pillars": [
+      { "index": "01", "label": "Ages welcomed from" },
+      { "index": "02", "label": "Local Vietnamese coaches trained" },
+      { "index": "03", "label": "Scholarships per year for young Vietnamese talents" }
+    ]
+  },
+  "impact": {
+    "micro-label": "06 — IMPACT",
+    "headline-line1": "BUILT IN VIETNAM.",
+    "headline-accent": "FOR VIETNAM.",
+    "subtitle": "Oasis is more than a club. It's a long-term commitment to Da Nang.",
+    "years": "yrs",
+    "stats": [
+      { "index": "01", "label": "Direct jobs created", "sublabel": "Coaches, F&B, operations, maintenance" },
+      { "index": "02", "label": "Vietnamese staff", "sublabel": "Local hiring as a core principle" },
+      { "index": "03", "label": "Long-term commitment to Da Nang", "sublabel": "A multi-decade vision, not a short-term play" },
+      { "index": "04", "label": "Built and operated from Da Nang", "sublabel": "Headquartered, staffed, and run locally" }
+    ],
+    "closing": "Every court built, every staff hired, every player trained contributes to Da Nang's emergence as Asia's next sport destination."
+  },
+  "founders": {
+    "micro-label": "07 — THE FOUNDERS",
+    "headline": ["FOUR FOUNDERS.", "ROOTED IN ASIA."],
+    "subtitle": "One vision. Four complementary expertises. All operating from Asia.",
+    "people": [
+      { "index": "01", "name": "JULIEN", "initial": "J", "role": "Tech, AI & Strategy", "location": "Ho Chi Minh City, Vietnam" },
+      { "index": "02", "name": "PASCAL", "initial": "P", "role": "Construction & Operations", "location": "Bali, Indonesia" },
+      { "index": "03", "name": "LOUIS", "initial": "L", "role": "Business Development", "location": "Ho Chi Minh City, Vietnam" },
+      { "index": "04", "name": "TU", "initial": "T", "role": "Local Operations & Partnerships", "location": "Ho Chi Minh City, Vietnam" }
+    ]
+  },
+  "cta": {
+    "micro-label": "08 — CONTACT",
+    "headline-line1": "THE OASIS IS COMING.",
+    "headline-pre": "JOIN THE ",
+    "headline-accent": "MOVEMENT.",
+    "contacts": [
+      { "label": "PARTNERSHIPS", "description": "Institutional partners and local stakeholders", "email": "partnerships@oasispadel.vn" },
+      { "label": "INVESTORS", "description": "Family offices, operators, and strategic investors", "email": "investors@oasispadel.vn" },
+      { "label": "GENERAL", "description": "Players, press, and curious minds", "email": "hello@oasispadel.vn" }
+    ],
+    "footer-left": "© 2026 Oasis Padel Academy",
+    "footer-center": "Da Nang, Vietnam"
+  }
 }

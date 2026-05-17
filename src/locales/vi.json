@@ -49,8 +49,53 @@
       "specs": ["CÀ PHÊ ĐẶC SẢN", "BẾP LÀNH MẠNH", "THÂN THIỆN VỚI COWORKING"]
     }
   },
-  "academy": {},
-  "impact": {},
-  "founders": {},
-  "cta": {}
+  "academy": {
+    "micro-label": "05 — HỌC VIỆN",
+    "headline": ["XÂY DỰNG CHO", "THẾ HỆ TIẾP THEO."],
+    "subtitle": "Học viện Padel Oasis — Trường padel chuyên biệt đầu tiên tại Đà Nẵng dành cho trẻ em và người lớn.",
+    "paragraph": "Một chương trình được xây dựng với các huấn luyện viên quốc tế và tài năng địa phương. Mở cho trẻ em từ 6 tuổi. Học bổng cho các cầu thủ trẻ Việt Nam triển vọng. Bởi vì tương lai của padel tại châu Á sẽ được viết tại đây, bởi các em.",
+    "pillars": [
+      { "index": "01", "label": "Độ tuổi tiếp nhận từ" },
+      { "index": "02", "label": "Huấn luyện viên Việt Nam được đào tạo" },
+      { "index": "03", "label": "Học bổng mỗi năm cho tài năng trẻ Việt Nam" }
+    ]
+  },
+  "impact": {
+    "micro-label": "06 — TÁC ĐỘNG",
+    "headline-line1": "XÂY TẠI VIỆT NAM.",
+    "headline-accent": "VÌ VIỆT NAM.",
+    "subtitle": "Oasis không chỉ là một câu lạc bộ. Đó là một cam kết dài hạn với Đà Nẵng.",
+    "years": "năm",
+    "stats": [
+      { "index": "01", "label": "Việc làm trực tiếp được tạo ra", "sublabel": "Huấn luyện viên, F&B, vận hành, bảo trì" },
+      { "index": "02", "label": "Nhân viên Việt Nam", "sublabel": "Tuyển dụng địa phương là nguyên tắc cốt lõi" },
+      { "index": "03", "label": "Cam kết dài hạn với Đà Nẵng", "sublabel": "Tầm nhìn nhiều thập kỷ, không phải ngắn hạn" },
+      { "index": "04", "label": "Xây dựng và vận hành từ Đà Nẵng", "sublabel": "Trụ sở, nhân sự và vận hành tại địa phương" }
+    ],
+    "closing": "Mỗi sân được xây, mỗi nhân viên được tuyển, mỗi cầu thủ được đào tạo đều góp phần vào sự nổi lên của Đà Nẵng như điểm đến thể thao tiếp theo của châu Á."
+  },
+  "founders": {
+    "micro-label": "07 — NHÀ SÁNG LẬP",
+    "headline": ["BỐN NHÀ SÁNG LẬP.", "GỐC RỄ TẠI CHÂU Á."],
+    "subtitle": "Một tầm nhìn. Bốn chuyên môn bổ trợ lẫn nhau. Tất cả hoạt động tại châu Á.",
+    "people": [
+      { "index": "01", "name": "JULIEN", "initial": "J", "role": "Công nghệ, AI & Chiến lược", "location": "Thành phố Hồ Chí Minh, Việt Nam" },
+      { "index": "02", "name": "PASCAL", "initial": "P", "role": "Xây dựng & Vận hành", "location": "Bali, Indonesia" },
+      { "index": "03", "name": "LOUIS", "initial": "L", "role": "Phát triển kinh doanh", "location": "Thành phố Hồ Chí Minh, Việt Nam" },
+      { "index": "04", "name": "TU", "initial": "T", "role": "Vận hành & Đối tác địa phương", "location": "Thành phố Hồ Chí Minh, Việt Nam" }
+    ]
+  },
+  "cta": {
+    "micro-label": "08 — LIÊN HỆ",
+    "headline-line1": "OASIS ĐANG ĐẾN.",
+    "headline-pre": "THAM GIA ",
+    "headline-accent": "LÀN SÓNG.",
+    "contacts": [
+      { "label": "ĐỐI TÁC", "description": "Đối tác tổ chức và bên liên quan địa phương", "email": "partnerships@oasispadel.vn" },
+      { "label": "NHÀ ĐẦU TƯ", "description": "Văn phòng gia đình, nhà điều hành, và nhà đầu tư chiến lược", "email": "investors@oasispadel.vn" },
+      { "label": "LIÊN HỆ CHUNG", "description": "Người chơi, báo chí, và những tâm hồn tò mò", "email": "hello@oasispadel.vn" }
+    ],
+    "footer-left": "© 2026 Học viện Padel Oasis",
+    "footer-center": "Đà Nẵng, Việt Nam"
+  }
 }
