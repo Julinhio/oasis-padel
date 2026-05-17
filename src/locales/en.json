@@ -28,7 +28,27 @@
       "Club in Da Nang today"
     ]
   },
-  "club": {},
+  "club": {
+    "micro-label": "04 — THE CLUB",
+    "courts": {
+      "index": "4.1",
+      "headline": ["FOUR COURTS.", "ONE STANDARD."],
+      "paragraph": "Panoramic glass walls. World Padel Tour-grade surface. Professional LED lighting designed for high-performance play. Our four indoor courts are built to international competition standards, accessible to everyone from beginners to pros.",
+      "specs": ["20m × 10m  ·  REGULATION SIZE", "12mm TEMPERED GLASS", "LED 800 LUX  ·  TV-READY"]
+    },
+    "wellness": {
+      "index": "4.2",
+      "headline": ["RECOVER", "LIKE A PRO."],
+      "paragraph": "A dedicated wellness area built around what athletes actually need: a Finnish sauna, an ice bath, a stretching zone. Recovery isn't a luxury. It's part of the practice.",
+      "specs": ["FINNISH SAUNA  ·  90°C", "ICE BATH  ·  4°C", "STRETCHING ZONE"]
+    },
+    "lounge": {
+      "index": "4.3",
+      "headline": ["WHERE THE GAME", "CONTINUES."],
+      "paragraph": "Specialty coffee, healthy food, and a workspace built for digital nomads. Whether you stay for a coffee or a full afternoon, the lounge is the social heart of Oasis.",
+      "specs": ["SPECIALTY COFFEE", "HEALTHY KITCHEN", "COWORKING-FRIENDLY"]
+    }
+  },
   "academy": {},
   "impact": {},
   "founders": {},

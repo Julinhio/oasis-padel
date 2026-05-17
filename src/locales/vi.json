@@ -28,7 +28,27 @@
       "Câu lạc bộ tại Đà Nẵng hiện nay"
     ]
   },
-  "club": {},
+  "club": {
+    "micro-label": "04 — CÂU LẠC BỘ",
+    "courts": {
+      "index": "4.1",
+      "headline": ["BỐN SÂN ĐẤU.", "MỘT TIÊU CHUẨN."],
+      "paragraph": "Tường kính toàn cảnh. Mặt sân đạt chuẩn World Padel Tour. Hệ thống đèn LED chuyên nghiệp cho hiệu suất cao. Bốn sân indoor được xây dựng theo tiêu chuẩn thi đấu quốc tế, dành cho mọi trình độ từ người mới đến chuyên nghiệp.",
+      "specs": ["20m × 10m  ·  KÍCH THƯỚC CHUẨN", "KÍNH CƯỜNG LỰC 12MM", "LED 800 LUX  ·  SẴN SÀNG TRUYỀN HÌNH"]
+    },
+    "wellness": {
+      "index": "4.2",
+      "headline": ["PHỤC HỒI", "NHƯ CHUYÊN NGHIỆP."],
+      "paragraph": "Khu vực wellness được thiết kế xoay quanh nhu cầu thực sự của vận động viên: phòng xông hơi kiểu Phần Lan, bể nước đá, khu vực giãn cơ. Phục hồi không phải là xa xỉ. Đó là một phần của quá trình luyện tập.",
+      "specs": ["XÔNG HƠI PHẦN LAN  ·  90°C", "BỂ NƯỚC ĐÁ  ·  4°C", "KHU VỰC GIÃN CƠ"]
+    },
+    "lounge": {
+      "index": "4.3",
+      "headline": ["NƠI TRẬN ĐẤU", "TIẾP DIỄN."],
+      "paragraph": "Cà phê đặc sản, ẩm thực lành mạnh, và không gian làm việc dành cho digital nomad. Dù bạn ở lại uống một ly cà phê hay cả buổi chiều, lounge là trái tim của Oasis.",
+      "specs": ["CÀ PHÊ ĐẶC SẢN", "BẾP LÀNH MẠNH", "THÂN THIỆN VỚI COWORKING"]
+    }
+  },
   "academy": {},
   "impact": {},
   "founders": {},

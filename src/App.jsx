@@ -3,8 +3,9 @@ import Nav from './components/layout/Nav'
 import Hero from './components/sections/Hero'
 import Manifesto from './components/sections/Manifesto'
 import Movement from './components/sections/Movement'
+import Club from './components/sections/Club'
 
-const PLACEHOLDERS = ['club', 'academy', 'impact', 'founders', 'contact']
+const PLACEHOLDERS = ['academy', 'impact', 'founders', 'contact']
 
 function App() {
   const lenis = useLenis()
@@ -15,6 +16,7 @@ function App() {
       <Hero />
       <Manifesto />
       <Movement />
+      <Club />
       {PLACEHOLDERS.map((id, i) => (
         <section
           key={id}

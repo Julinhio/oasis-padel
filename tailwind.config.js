@@ -32,6 +32,10 @@ export default {
           'clamp(48px, 6.5vw, 100px)',
           { lineHeight: '0.95', letterSpacing: '-0.02em' },
         ],
+        subhead: [
+          'clamp(30px, 4.2vw, 56px)',
+          { lineHeight: '1', letterSpacing: '-0.02em' },
+        ],
       },
       spacing: {
         'section-y': 'clamp(80px, 12vw, 160px)',
