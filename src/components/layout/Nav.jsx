@@ -97,7 +97,7 @@ function Nav({ lenis }) {
                 <a
                   href={`#${l.id}`}
                   onClick={(e) => goTo(e, `#${l.id}`)}
-                  className="font-grotesk text-xs font-medium uppercase tracking-micro text-cream/70 transition-colors duration-200 hover:text-white"
+                  className="font-grotesk text-xs font-medium uppercase tracking-micro text-cream/70 transition-colors duration-200 [@media_(hover:hover)_and_(pointer:fine)]:hover:text-white"
                 >
                   {l.label}
                 </a>
@@ -158,7 +158,7 @@ function Nav({ lenis }) {
                   <a
                     href={`#${l.id}`}
                     onClick={(e) => goTo(e, `#${l.id}`)}
-                    className="font-archivo text-2xl uppercase tracking-headline text-cream transition-colors duration-200 hover:text-sun sm:text-4xl"
+                    className="font-archivo text-2xl uppercase tracking-headline text-cream transition-colors duration-200 [@media_(hover:hover)_and_(pointer:fine)]:hover:text-sun sm:text-4xl"
                   >
                     {l.label}
                   </a>

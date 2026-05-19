@@ -15,10 +15,10 @@ function Manifesto() {
   const line2 = t('manifesto.headline-line-2')
 
   const line = (delay) => ({
-    initial: reduce ? false : { opacity: 0, y: 80 },
+    initial: reduce ? false : { opacity: 0, y: 32 },
     whileInView: reduce ? {} : { opacity: 1, y: 0 },
     viewport: { once: true, margin: TRIGGER },
-    transition: { duration: 1.2, delay, ease: EASE_OUT },
+    transition: { duration: 0.7, delay, ease: EASE_OUT },
   })
 
   return (
@@ -42,7 +42,7 @@ function Manifesto() {
                 initial={{ color: '#FFFFFF' }}
                 whileInView={{ color: '#F2C94C' }}
                 viewport={{ once: true, margin: TRIGGER }}
-                transition={{ delay: 1.3, duration: 0.4, ease: 'easeOut' }}
+                transition={{ delay: 0.6, duration: 0.4, ease: 'easeOut' }}
               >
                 {accent}
               </motion.span>

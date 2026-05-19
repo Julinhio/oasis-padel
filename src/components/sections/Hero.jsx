@@ -134,14 +134,16 @@ function Hero() {
         <div className="pointer-events-none absolute inset-x-0 -bottom-6 h-[154px] bg-[linear-gradient(to_top,#1C1C1C_0%,#1C1C1C_45%,transparent_100%)]" />
 
         <div className="absolute inset-x-0 top-[45%] flex -translate-y-1/2 flex-col items-center px-6 text-center">
-          <motion.h1
+          <motion.img
+            src="/assets/brand/oasis-wordmark.png"
+            alt="Oasis Padel Academy"
+            width="1536"
+            height="1024"
             initial={reduce ? false : { opacity: 0, scale: 0.95 }}
             animate={reduce ? {} : { opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, ease: 'easeOut' }}
-            className="font-syncopate text-[clamp(2.75rem,9vw,7.5rem)] font-bold leading-none text-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.55)]"
-          >
-            OASIS
-          </motion.h1>
+            className="h-auto w-[clamp(200px,41vw,550px)] drop-shadow-[0_2px_24px_rgba(0,0,0,0.55)]"
+          />
 
           <motion.div
             initial={reduce ? false : { opacity: 0 }}

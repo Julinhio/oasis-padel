@@ -173,3 +173,23 @@ html.lenis body {
 .lenis.lenis-smooth iframe {
   pointer-events: none;
 }
+
+/* ===== Academy hero — slow ambient zoom, runs off the main thread ===== */
+@keyframes academy-zoom {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+.academy-zoom {
+  animation: academy-zoom 16s ease-in-out infinite;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .academy-zoom {
+    animation: none;
+  }
+}

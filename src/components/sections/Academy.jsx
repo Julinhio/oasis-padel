@@ -24,13 +24,11 @@ function Academy() {
       id="academy"
       className="relative flex min-h-screen items-center overflow-hidden py-section-y lg:min-h-[120vh]"
     >
-      <motion.img
+      <img
         src="/assets/academy/academy-hero.png"
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover"
-        animate={reduce ? {} : { scale: [1, 1.05, 1] }}
-        transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
+        className="academy-zoom absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-black/70" />
       <ChapterMark number="04" side="left" />
@@ -50,7 +48,7 @@ function Academy() {
           initial={reduce ? false : { opacity: 0 }}
           whileInView={reduce ? {} : { opacity: 1 }}
           viewport={inView}
-          transition={{ duration: 0.5, delay: reduce ? 0 : 1.2, ease: 'easeOut' }}
+          transition={{ duration: 0.5, delay: reduce ? 0 : 0.35, ease: 'easeOut' }}
           className="mt-8 max-w-[55ch] font-grotesk text-lg font-medium text-cream"
         >
           {t('academy.subtitle')}
@@ -60,7 +58,7 @@ function Academy() {
           initial={reduce ? false : { opacity: 0 }}
           whileInView={reduce ? {} : { opacity: 1 }}
           viewport={inView}
-          transition={{ duration: 0.5, delay: reduce ? 0 : 1.5, ease: 'easeOut' }}
+          transition={{ duration: 0.5, delay: reduce ? 0 : 0.5, ease: 'easeOut' }}
           className="mt-5 max-w-[60ch] font-inter text-base text-cream/80"
         >
           {t('academy.paragraph')}
@@ -71,7 +69,7 @@ function Academy() {
             <RevealBlock
               key={i}
               y={30}
-              delay={i * 0.2}
+              delay={i * 0.06}
               className="rounded border border-cream/10 bg-black/60 p-8 backdrop-blur-md"
             >
               <span className="font-grotesk text-xs font-medium tracking-micro text-sun">
@@ -80,7 +78,7 @@ function Academy() {
               <AnimatedNumber
                 value={p.value}
                 suffix={p.suffix}
-                delay={i * 0.2}
+                delay={i * 0.06}
                 className="mt-6 block font-archivo text-6xl tabular-nums text-sun"
               />
               <p className="mt-3 font-grotesk text-base text-cream">

@@ -51,7 +51,7 @@ function Movement() {
           initial={reduce ? false : { opacity: 0 }}
           whileInView={reduce ? {} : { opacity: 1 }}
           viewport={{ once: true, margin: '0px 0px -15% 0px' }}
-          transition={{ duration: 0.5, delay: reduce ? 0 : 1.4, ease: 'easeOut' }}
+          transition={{ duration: 0.5, delay: reduce ? 0 : 0.45, ease: 'easeOut' }}
           className="mt-10 max-w-[60ch] font-inter text-lg text-cream"
         >
           {t('movement.paragraph')}
@@ -62,14 +62,14 @@ function Movement() {
             {STATS.map((s, i) => (
               <RevealBlock
                 key={i}
-                delay={i * 0.15}
+                delay={i * 0.06}
                 className="basis-full text-center sm:basis-[calc(50%_-_1rem)] lg:basis-[calc(33.333%_-_1.34rem)]"
               >
                 <AnimatedNumber
                   value={s.value}
                   prefix={s.prefix || ''}
                   suffix={s.suffix || ''}
-                  delay={i * 0.15}
+                  delay={i * 0.06}
                   className={`block font-archivo text-4xl tabular-nums lg:text-6xl ${
                     s.highlight ? 'text-sun' : 'text-white'
                   }`}

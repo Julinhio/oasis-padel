@@ -70,7 +70,7 @@ function ClubSubsection({ data, image, alt, imageLeft, reveal, chapter }) {
             initial={reduce ? false : { opacity: 0 }}
             whileInView={reduce ? {} : { opacity: 1 }}
             viewport={inView}
-            transition={{ duration: 0.5, delay: reduce ? 0 : 1, ease: 'easeOut' }}
+            transition={{ duration: 0.5, delay: reduce ? 0 : 0.35, ease: 'easeOut' }}
             className="mt-6 font-inter text-base text-cream"
           >
             {data.paragraph}
@@ -83,8 +83,8 @@ function ClubSubsection({ data, image, alt, imageLeft, reveal, chapter }) {
             variants={{
               visible: {
                 transition: {
-                  staggerChildren: reduce ? 0 : 0.2,
-                  delayChildren: reduce ? 0 : 1.3,
+                  staggerChildren: reduce ? 0 : 0.06,
+                  delayChildren: reduce ? 0 : 0.4,
                 },
               },
             }}
